@@ -70,7 +70,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "dell-xps-14-2024",
     brand: "Dell",
-    model: "XPS 14 (9440)",
+    model: "XPS 14",
     tagline: "Architectural minimalism meets Intel Core Ultra AI processing.",
     badge: "New",
     price: 1899,
@@ -131,7 +131,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "lenovo-thinkpad-x1-carbon-gen12",
     brand: "Lenovo",
-    model: "ThinkPad X1 Carbon Gen 12",
+    model: "ThinkPad X1 Carbon",
     tagline: "The gold standard of business and developer ultrabooks.",
     badge: "Lightweight",
     price: 1749,
@@ -192,7 +192,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "asus-rog-zephyrus-g16",
     brand: "ASUS",
-    model: "ROG Zephyrus G16 (2024)",
+    model: "ROG Zephyrus G16",
     tagline: "The stealth gaming and creative powerhouse in a CNC unibody.",
     badge: "Performance",
     price: 2299,
@@ -237,7 +237,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "1-Zone RGB Backlit Chiclet Keyboard, 1.7mm travel, Slash Lighting lid",
       materials: "CNC Aluminum Unibody with Slash Lighting LED array",
       warranty: "1 Year Global Warranty"
-    ],
+    },
     pros: [
       "Incredible 240Hz 0.2ms OLED panel with flawless motion clarity",
       "Full-fat RTX 4080 graphics in a remarkably slim 1.49cm chassis",
@@ -253,7 +253,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "apple-macbook-air-15-m3",
     brand: "Apple",
-    model: "MacBook Air 15\" (M3)",
+    model: "MacBook Air 15\"",
     tagline: "Thin, completely silent, and exceptionally enduring.",
     badge: "Popular",
     price: 1299,
@@ -298,7 +298,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Backlit Magic Keyboard with Touch ID",
       materials: "100% Recycled Aluminum Unibody with Anodization Seal",
       warranty: "1 Year Limited Warranty"
-    ],
+    },
     pros: [
       "Completely fanless design: 100% silent in every situation",
       "Superb 18-hour real-world battery endurance on single charge",
@@ -314,7 +314,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "hp-spectre-x360-14-2024",
     brand: "HP",
-    model: "Spectre x360 14 (2-in-1)",
+    model: "Spectre x360 14",
     tagline: "Gem-cut precision 2-in-1 convertible with IMAX Enhanced OLED.",
     badge: "Creator Pick",
     price: 1629,
@@ -328,9 +328,9 @@ const NOVA_LAPTOPS_DATA = [
     weight: 1.44,
     weightCategory: "1.3–1.6kg",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1544731612-de292439cc67?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1544731612-de292439cc67?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
     ],
     specs: {
       processor: "Intel Core Ultra 7 155H (16 Cores, up to 4.8 GHz)",
@@ -358,7 +358,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Full-size backlit keyboard + Rechargeable MPP 2.0 Tilt Pen included",
       materials: "CNC All-Metal Aluminum in Nightfall Black / Slate Blue",
       warranty: "1 Year Limited Hardware Warranty"
-    ],
+    },
     pros: [
       "Versatile 360-degree hinge allows tablet, tent, and presentation modes",
       "Included rechargeable stylus with tilt sensitivity and magnetic lock",
@@ -374,7 +374,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "razer-blade-14-2024",
     brand: "Other",
-    model: "Razer Blade 14 (Mercury)",
+    model: "Razer Blade 14",
     tagline: "Ultra-dense anodized gaming machine with Ryzen AI and RTX 4070.",
     badge: "Performance",
     price: 2399,
@@ -418,7 +418,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Per-Key RGB Powered by Razer Chroma with anti-ghosting",
       materials: "T6 CNC Anodized Aluminum with anti-fingerprint coating",
       warranty: "1 Year Laptop Warranty / 2 Year Battery Warranty"
-    ],
+    },
     pros: [
       "Upgradeable dual DDR5 SO-DIMM slots rare in a 14-inch chassis",
       "Class-leading 140W full power RTX 4070 GPU output",
@@ -434,7 +434,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "lenovo-legion-pro-7i-gen9",
     brand: "Lenovo",
-    model: "Legion Pro 7i Gen 9",
+    model: "Legion Pro 7i",
     tagline: "Desktop-grade overclockable power with AI engine cooling.",
     badge: "Performance",
     price: 2799,
@@ -478,7 +478,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Legion TrueStrike per-key RGB with 100% anti-ghosting + numpad",
       materials: "Anodized Aluminum top cover with Legion ColdFront 5.0 vapor chamber",
       warranty: "2 Year Legion Ultimate Support with Onsite Repair"
-    ],
+    },
     pros: [
       "Maximum 175W RTX 4090 GPU delivers unbeatable frame rates in 4K",
       "Intel i9-14900HX handles complex Unreal, Blender, and code builds with ease",
@@ -494,7 +494,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "microsoft-surface-laptop-7-snapdragon",
     brand: "Microsoft",
-    model: "Surface Laptop 7 (Copilot+ PC)",
+    model: "Surface Laptop 7",
     tagline: "Revolutionary ARM battery life with 45 TOPS neural engine.",
     badge: "New",
     price: 1399,
@@ -538,7 +538,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Full-pitch keyboard with dedicated Copilot Key and haptic precision touchpad",
       materials: "Anodized Aluminum in Sapphire, Dune, Platinum, and Black",
       warranty: "1 Year Microsoft Commercial / Consumer Warranty"
-    ],
+    },
     pros: [
       "Historic 16-20 hour real-world Windows battery runtime",
       "Whisper quiet operation that remains cool directly on your lap",
@@ -554,7 +554,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "asus-zenbook-duo-oled-2024",
     brand: "ASUS",
-    model: "Zenbook Duo (2024)",
+    model: "Zenbook Duo",
     tagline: "Dual 14-inch 120Hz 3K OLED screens with detachable magnetic keyboard.",
     badge: "Creator Pick",
     price: 1699,
@@ -598,7 +598,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Detachable Bluetooth/Pogo-pin backlit keyboard with touchpad",
       materials: "Magnesium-Aluminum Alloy Chassis with built-in 90° kickstand",
       warranty: "1 Year ASUS Premium Care"
-    ],
+    },
     pros: [
       "Massive 19.8-inch total combined screen real estate on a coffee table",
       "Detachable physical Bluetooth keyboard stores neatly between the screens",
@@ -658,7 +658,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Hot-swappable Input Modules (Standard keyboard, Numpad, RGB Macropad)",
       materials: "Recycled CNC Aluminum & Magnesium with open repair QR codes",
       warranty: "2 Year Limited Warranty with direct component replacement"
-    ],
+    },
     pros: [
       "100% repairable and upgradeable: replace motherboard, GPU, RAM, ports anytime",
       "Fully customizable port selection via 6 hot-swappable side expansion cards",
@@ -688,9 +688,9 @@ const NOVA_LAPTOPS_DATA = [
     weight: 1.32,
     weightCategory: "1.3–1.6kg",
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1544731612-de292439cc67?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1544731612-de292439cc67?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80"
     ],
     specs: {
       processor: "Intel Core Ultra 5 125H (14 Cores, up to 4.5 GHz)",
@@ -718,7 +718,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Backlit keyboard with multi-gesture OceanGlass touchpad",
       materials: "Aluminum A and D covers in Pure Silver",
       warranty: "1 Year Acer Traveler's Warranty"
-    ],
+    },
     pros: [
       "Incredible 2.8K OLED panel value under $900 price bracket",
       "Sharp 1440p QHD webcam outperforms laptops double its cost",
@@ -778,7 +778,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Full keyboard with 4-column dedicated numeric keypad",
       materials: "Magnesium Alloy Aerospace-grade ultra-light chassis",
       warranty: "1 Year LG Manufacturer Warranty"
-    ],
+    },
     pros: [
       "Astonishing 1.29kg weight for a massive 17-inch screen size",
       "Spacious anti-glare 16:10 display with smooth 144Hz refresh rate",
@@ -794,7 +794,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "dell-precision-5690-workstation",
     brand: "Dell",
-    model: "Precision 5690 Mobile Workstation",
+    model: "Precision 5690",
     tagline: "Enterprise ISV-certified powerhouse for CAD, AI, and complex data.",
     badge: "Performance",
     price: 3199,
@@ -838,7 +838,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Backlit keyboard with large glass precision touchpad",
       materials: "CNC Aluminum in Titan Gray with carbon fiber composite palmrest",
       warranty: "3 Year ProSupport Plus with Next Business Day Onsite"
-    ],
+    },
     pros: [
       "NVIDIA RTX 3500 Ada GPU with ECC memory prevents calculation crashes in SolidWorks and ANSYS",
       "Stunning 4K+ OLED screen with 100% AdobeRGB color space precision",
@@ -898,7 +898,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Full-size backlit keyboard with numpad + AKG Quad speakers with Dolby Atmos",
       materials: "Recycled Armor Aluminum in Moonstone Gray",
       warranty: "1 Year Samsung Care+ Limited Warranty"
-    ],
+    },
     pros: [
       "Anti-reflective Corning Gorilla Glass DX glass drastically reduces reflections",
       "Seamless Samsung Galaxy phone & tablet multi-control and second-screen features",
@@ -914,7 +914,7 @@ const NOVA_LAPTOPS_DATA = [
   {
     id: "asus-tuf-gaming-a15-2024",
     brand: "ASUS",
-    model: "TUF Gaming A15 (2024)",
+    model: "TUF Gaming A15",
     tagline: "Rugged military-grade durability with high-fps gaming performance.",
     badge: "Popular",
     price: 1099,
@@ -958,7 +958,7 @@ const NOVA_LAPTOPS_DATA = [
       keyboard: "Desktop-style RGB keyboard with highlighted WASD and numeric keypad",
       materials: "Mecha Gray embossed lid with MIL-STD-810H shock and vibration rating",
       warranty: "1 Year ASUS Warranty"
-    ],
+    },
     pros: [
       "Full 140W max TGP for the RTX 4060 ensures unthrottled 1080p/1440p gaming",
       "Huge 90Wh battery offers surprising battery life for a gaming laptop",
@@ -1127,6 +1127,60 @@ const NOVA_GUIDES_DATA = [
       </ol>
     `,
     relatedLaptops: ["macbook-pro-16-m3", "asus-zenbook-duo-oled-2024", "samsung-galaxy-book4-ultra"]
+  },
+  {
+    id: "laptop-thermal-cooling-systems",
+    title: "Laptop Thermals Explained: Vapor Chambers, Liquid Metal & Fan Acoustics",
+    slug: "laptop-thermals-cooling-systems-explained",
+    category: "Performance",
+    readTime: "9 min read",
+    author: "Dr. Elena Vance",
+    authorRole: "Principal Hardware Architect at Nova",
+    publishDate: "October 2024",
+    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&q=80",
+    excerpt: "Why does your laptop throttle under sustained render loads? We unpack vapor chambers, phase-change thermal interface pads, liquid metal TIMs, and fan acoustic curves.",
+    featured: false,
+    content: `
+      <h2>The Physics of Laptop Heat Dissipation</h2>
+      <p>Modern mobile CPUs and GPUs can boost up to 150W+ of peak thermal power within mere milliseconds. Without sophisticated heat transfer mechanics, processors hit their 100°C junction temperature (TjMax) in seconds, causing thermal throttling and dropped frame rates.</p>
+
+      <h3>1. Traditional Heatpipes vs Vapor Chambers</h3>
+      <p>Standard copper heatpipes transport heat linearly via sintered copper wicks and capillary action. Modern vapor chambers, by contrast, are planar vacuum-sealed envelopes that distribute concentrated hotspots across the entire width of the chassis, offering up to 40% faster heat equalization.</p>
+
+      <h3>2. Liquid Metal vs Phase-Change Thermal Pads</h3>
+      <p>Liquid metal (gallium-indium alloys) offers thermal conductivities exceeding 73 W/m·K compared to 8–12 W/m·K in traditional silicon thermal pastes. Manufacturers like ASUS ROG use internal resin barriers to prevent electrical shorts while dropping core temperatures by 8–15°C under maximum sustained compute loads.</p>
+
+      <h3>3. Fan Blade Aerodynamics & Decibel Tuning</h3>
+      <p>High blade-count polymer fans (80 to 90 blades per fan) with liquid crystal polymer designs move more cubic feet of air per minute (CFM) at lower RPMs, shifting high-frequency fan pitch whine into lower, less intrusive acoustic frequencies.</p>
+    `,
+    relatedLaptops: ["asus-rog-zephyrus-g16", "lenovo-legion-pro-7i-gen9", "razer-blade-14-2024"]
+  },
+  {
+    id: "battery-science-watt-hour-guide",
+    title: "Laptop Battery Longevity & Watt-Hours: The Truth Behind Battery Claims",
+    slug: "laptop-battery-longevity-watt-hours-guide",
+    category: "Performance",
+    readTime: "8 min read",
+    author: "Marcus Sterling",
+    authorRole: "Display Metrology & Power Lead",
+    publishDate: "October 2024",
+    image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=1200&q=80",
+    excerpt: "Understand the physics of 99.9Wh FAA airline limits, charge cycles, fast charging degradation, and true real-world wattage draw.",
+    featured: false,
+    content: `
+      <h2>Deconstructing Laptop Battery Metrics</h2>
+      <p>Battery life claims in marketing slides (such as 'up to 24 hours') are almost always measured with the screen at 150 nits playing looped offline video. In the real world of web compiling, active Slack threads, high-brightness OLEDs, and background syncing, realistic endurance is governed by Watt-Hour (Wh) sizing and idle power draw.</p>
+
+      <h3>The 99.9Wh Ceiling</h3>
+      <p>Why do flagship 16-inch laptops (like the MacBook Pro 16 and Lenovo Legion Pro 7i) stop at 99.9Wh? The FAA and international aviation safety regulations strictly restrict Lithium-ion batteries carried into passenger airplane cabins to 100 Watt-hours without special airline pre-approval.</p>
+
+      <h3>Tips for Extending Battery Lifespan to 5+ Years</h3>
+      <ul>
+        <li><strong>Set 80% Charge Limits:</strong> Keeping Lithium-ion cells at 100% full voltage under elevated temperatures accelerates electrode degradation. Using firmware charge limits can double cycle life from 500 to 1000+ cycles.</li>
+        <li><strong>Avoid High-Wattage Charging on Hot Laps:</strong> Charging at 100W+ generates internal heat; charging while running heavy 3D rendering spikes cell temperatures above 45°C.</li>
+      </ul>
+    `,
+    relatedLaptops: ["apple-macbook-air-15-m3", "microsoft-surface-laptop-7-snapdragon", "macbook-pro-16-m3"]
   }
 ];
 

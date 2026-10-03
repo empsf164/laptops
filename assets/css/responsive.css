@@ -1,7 +1,21 @@
 /* ==========================================================================
    NOVA LAPTOPS - Responsive Breakpoints & Viewport Guards
-   Mobile-First Robust Layout Fixes (Zero Horizontal Overflow)
+   Tablet & 1024px: 2 Cards per Row + Last Odd Card Centered
+   Mobile-First Robust Layout Fixes (Zero Horizontal Overflow, Perfect Centering)
+   Hide Header Sign Up on <= 1024px, Keep in Mobile Drawer Menu
    ========================================================================== */
+
+/* Universal Overflow & Box Sizing Guards */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
 
 /* Large Desktop (>= 1280px) */
 @media (min-width: 1280px) {
@@ -10,8 +24,8 @@
   }
 }
 
-/* Medium Desktop & Small Laptops (1024px to 1279px) */
-@media (max-width: 1279px) {
+/* Medium Desktop & Small Laptops (1025px to 1279px) */
+@media (min-width: 1025px) and (max-width: 1279px) {
   .grid-4 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -25,25 +39,93 @@
   }
 }
 
-/* Tablets & Small Desktops (769px to 1023px) */
-@media (max-width: 1023px) {
+/* ==========================================================================
+   Tablets & 1024px Views (641px to 1024px)
+   Align 2 cards in one row and center the last odd-numbered card
+   ========================================================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Enforce 2 cards per row across all grid sections and pages */
+  .grid,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  #laptopsGridContainer,
+  .wizard-options-grid,
+  .guides-grid,
+  .saved-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Center the last odd-numbered card in any 2-column grid */
+  .grid > :last-child:nth-child(odd),
+  .grid-2 > :last-child:nth-child(odd),
+  .grid-3 > :last-child:nth-child(odd),
+  .grid-4 > :last-child:nth-child(odd),
+  #laptopsGridContainer > :last-child:nth-child(odd),
+  .wizard-options-grid > :last-child:nth-child(odd),
+  .guides-grid > :last-child:nth-child(odd),
+  .saved-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: 100% !important;
+    max-width: calc(50% - 0.75rem) !important;
+  }
+
+  /* Ensure card containers fill their allotted column space */
+  .laptop-card,
+  .guide-card,
+  .glass-panel,
+  .wizard-option-card {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   General Layout Adaptations for Viewports <= 1024px (Mobile, Tablet, 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
   .main-nav {
-    display: none;
+    display: none !important;
   }
 
   .mobile-toggle-btn {
-    display: flex;
+    display: flex !important;
+  }
+
+  /* Remove Sign Up button from top header in mobile, tablet, and 1024px views */
+  .site-header .nav-auth-container,
+  .site-header .nav-actions .btn-primary {
+    display: none !important;
+  }
+
+  /* Ensure Sign Up button in mobile drawer is prominent and accessible */
+  .mobile-nav-drawer .nav-auth-container {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .mobile-nav-drawer .nav-auth-container .btn {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.9375rem !important;
   }
 
   .hero-content-wrapper {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
+    max-width: 580px;
   }
 
   .hero-cta-group {
@@ -80,37 +162,278 @@
     gap: 2rem;
   }
 
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+  .guide-feature-banner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
 }
 
-/* Mobile Devices (<= 768px) */
-@media (max-width: 768px) {
+/* ==========================================================================
+   Mobile Devices (<= 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
   :root {
     --header-height: 64px;
   }
 
-  .section {
-    padding: 3.5rem 0;
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
   }
 
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .section {
+    padding: 3rem 0 !important;
+  }
+
+  .section-sm {
+    padding: 2rem 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 2rem !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Hero Section */
   .hero {
-    padding: 3rem 0 2rem;
+    padding: 2.25rem 0 2rem !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  .hero-content-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .section-tag {
+    font-size: 0.6875rem !important;
+    padding: 0.3rem 0.65rem !important;
+    letter-spacing: 0.03em !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .hero-title {
-    font-size: 2.25rem;
+    font-size: clamp(1.85rem, 8vw, 2.4rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1rem !important;
+    word-break: break-word !important;
+    width: 100% !important;
   }
 
+  .hero-desc {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.5rem !important;
+    max-width: 100% !important;
+    padding: 0 0.25rem !important;
+    word-break: break-word !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Hero CTA full-width stacked touch targets */
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 2rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-cta-group .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    padding: 0.8rem 1.25rem !important;
+    font-size: 0.9375rem !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Compact 3-metric stats row */
   .hero-stats-row {
-    flex-direction: column;
-    gap: 1.25rem;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    padding-top: 1.25rem !important;
+    border-top: 1px solid var(--border-subtle) !important;
   }
 
-  .grid-4, .grid-3, .grid-2 {
-    grid-template-columns: 1fr;
+  .hero-stat-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .hero-stat-val {
+    font-size: 1.25rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-stat-lbl {
+    font-size: 0.6875rem !important;
+    letter-spacing: 0.02em !important;
+    margin-top: 0.2rem !important;
+  }
+
+  /* Hero Interactive Preview Card */
+  .hero-visual-card {
+    padding: 1rem !important;
+    border-radius: var(--radius-lg) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-pill-controls {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important;
+    padding: 0.25rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .hero-pill-btn {
+    font-size: 0.75rem !important;
+    padding: 0.45rem 0.5rem !important;
+    text-align: center !important;
+  }
+
+  .hero-spec-dynamic-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .hero-spec-metric {
+    padding: 0.65rem 0.85rem !important;
+  }
+
+  .hero-spec-metric-label {
+    font-size: 0.6875rem !important;
+  }
+
+  .hero-spec-metric-val {
+    font-size: 0.9375rem !important;
+  }
+
+  /* Search Bar */
+  .search-input-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .search-input-field {
+    font-size: 0.875rem !important;
+    padding: 0.75rem 0.85rem 0.75rem 2.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .discovery-main-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.875rem !important;
+  }
+
+  .discovery-main-header > div {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  /* 1-column layout on mobile */
+  .grid,
+  .grid-4,
+  .grid-3,
+  .grid-2,
+  #laptopsGridContainer,
+  .wizard-options-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  /* Reset odd card centering on mobile so cards take 100% width */
+  .grid > :last-child:nth-child(odd),
+  .grid-2 > :last-child:nth-child(odd),
+  .grid-3 > :last-child:nth-child(odd),
+  .grid-4 > :last-child:nth-child(odd),
+  #laptopsGridContainer > :last-child:nth-child(odd),
+  .wizard-options-grid > :last-child:nth-child(odd) {
+    grid-column: auto !important;
+    justify-self: stretch !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .details-overview-grid,
+  .details-spec-grid-3,
+  .details-spec-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .laptop-card,
+  .guide-card,
+  .glass-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card-specs-matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .cta-banner-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .guide-feature-banner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
   }
 
   .search-trigger-btn .search-kbd,
@@ -140,6 +463,13 @@
     display: none;
   }
 
+  .compare-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .compare-table th, .compare-table td {
     padding: 0.875rem 1rem;
     font-size: 0.8125rem;
@@ -151,47 +481,57 @@
   }
 
   .footer-top {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center !important;
   }
 
   .auth-card {
-    padding: 1.75rem 1.25rem;
-  }
-
-  .wizard-options-grid {
-    grid-template-columns: 1fr;
+    padding: 1.75rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .modal-dialog {
-    max-width: 95vw;
-    margin: 0 auto;
+    max-width: 95vw !important;
+    margin: 0 auto !important;
   }
 }
 
 /* Extra Small Screens (<= 375px) */
 @media (max-width: 375px) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 
   .hero-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem !important;
   }
 
   .btn {
-    padding: 0.55rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.875rem !important;
   }
 
   .card-specs-matrix {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-stats-row {
+    gap: 0.25rem !important;
+  }
+
+  .hero-stat-val {
+    font-size: 1.1rem !important;
+  }
+
+  .hero-stat-lbl {
+    font-size: 0.625rem !important;
   }
 }

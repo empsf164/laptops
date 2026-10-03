@@ -487,10 +487,21 @@
 }
 
 .laptop-card-title {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.laptop-card-title a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-primary);
 }
 
 .laptop-card-title a:hover {
@@ -735,22 +746,29 @@
   position: fixed;
   bottom: 1.5rem;
   left: 50%;
-  transform: translateX(-50%) translateY(120%);
+  transform: translateX(-50%) translateY(100px);
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-xl);
   padding: 0.875rem 1.5rem;
   box-shadow: var(--shadow-lg), var(--shadow-glow);
   z-index: 1050;
-  display: flex;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   align-items: center;
   gap: 1.5rem;
-  transition: transform var(--transition-smooth);
+  transition: transform var(--transition-smooth), opacity var(--transition-smooth);
   max-width: 90vw;
 }
 
 .compare-tray.visible {
-  transform: translateX(-50%) translateY(0);
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
 }
 
 .compare-tray-items {
@@ -1355,11 +1373,12 @@
 
 /* --- AUTHENTICATION CARDS --- */
 .auth-page-container {
-  min-height: calc(100vh - var(--header-height) - 150px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1.5rem;
+  padding: 2.5rem 1.5rem;
+  background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 65%), var(--bg-primary);
 }
 
 .auth-card {
@@ -1370,6 +1389,18 @@
   border-radius: var(--radius-xl);
   padding: 2.5rem;
   box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), #6366F1, var(--cyan-accent));
 }
 
 .auth-header {
@@ -1423,6 +1454,38 @@
   background-color: var(--border-subtle);
 }
 
+.social-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.social-auth-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-auth-btn:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
 /* --- TOAST NOTIFICATIONS --- */
 .toast-container {
   position: fixed;
@@ -1463,3 +1526,56 @@
     transform: translateX(0);
   }
 }
+
+/* --- RESPONSIVE LAYOUT HELPERS --- */
+.cta-banner-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  width: 100%;
+}
+
+.guide-feature-banner {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.details-overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: start;
+  width: 100%;
+}
+
+.details-spec-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.details-spec-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+

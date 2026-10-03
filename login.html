@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login to Your Nova Account — NOVA LAPTOPS</title>
-  <meta name="description" content="Sign in to your Nova Laptops account to sync your saved hardware shortlists and active comparisons across devices.">
-  
+  <meta name="description"
+    content="Sign in to your Nova Laptops account to sync your saved hardware shortlists and active comparisons across devices.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -14,68 +20,49 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-
-  <!-- ==================== STICKY NAVBAR ==================== -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="Nova Laptops Home">
-        <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
-        <span>NOVA</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Main Navigation">
-        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
-        <div class="nav-item"><a href="laptops.html" class="nav-link">Laptops</a></div>
-        <div class="nav-item"><a href="compare.html" class="nav-link">Compare</a></div>
-        <div class="nav-item"><a href="laptop-finder.html" class="nav-link">Laptop Finder</a></div>
-        <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
-        <div class="nav-item"><a href="saved.html" class="nav-link">Saved</a></div>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="theme-toggle-btn" aria-label="Toggle theme">
-          <i data-lucide="sun" style="width: 18px; height: 18px;"></i>
-        </button>
-        <a href="signup.html" class="btn btn-primary btn-sm">Create Account</a>
-      </div>
-    </div>
-  </header>
 
   <main class="auth-page-container">
     <div class="auth-card">
       <div class="auth-header">
-        <div class="brand-logo-icon" style="margin: 0 auto 1rem; width: 36px; height: 36px;">
-          <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
-        </div>
+        <a href="index.html" class="brand-logo" style="justify-content: center; margin: 0 auto 1.25rem; text-decoration: none;">
+          <div class="brand-logo-icon">
+            <i data-lucide="cpu" style="width: 18px; height: 18px;"></i>
+          </div>
+          <span>NOVA</span>
+        </a>
         <h1 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Welcome Back</h1>
-        <p style="font-size: 0.875rem; color: var(--text-secondary);">Access your saved shortlists and customized hardware comparisons.</p>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);">Access your saved shortlists and customized
+          hardware comparisons.</p>
       </div>
 
       <!-- Demo Credentials Notice -->
-      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+      <div
+        style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
         <strong style="color: var(--accent-primary);">Demo Account:</strong> alex.thorne@example.com / password123
       </div>
 
       <form id="loginForm">
         <div class="form-group">
           <label class="form-label" for="loginEmail">Email Address</label>
-          <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com" value="alex.thorne@example.com" required>
+          <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com"
+            value="alex.thorne@example.com" required>
         </div>
 
         <div class="form-group">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <label class="form-label" for="loginPassword" style="margin-bottom: 0;">Password</label>
-            <a href="forgot-password.html" style="font-size: 0.8125rem; color: var(--accent-primary);">Forgot password?</a>
-          </div>
-          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" value="password123" required>
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" value="password123"
+            required>
         </div>
 
-        <div class="form-group" style="display: flex; align-items: center;">
-          <label class="filter-checkbox-label">
+        <!-- Remember Me and Forgot Password on the same line -->
+        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem; margin-bottom: 1.25rem;">
+          <label class="filter-checkbox-label" style="margin-bottom: 0; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
             <input type="checkbox" class="filter-checkbox" checked>
-            <span>Remember me on this device</span>
+            <span>Remember me</span>
           </label>
+          <a href="forgot-password.html" style="font-size: 0.8125rem; color: var(--accent-primary); font-weight: 500; text-decoration: none;">Forgot password?</a>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
@@ -85,15 +72,30 @@
 
       <div class="auth-divider">Or continue with</div>
 
-      <button id="googleLoginBtn" class="btn btn-secondary" style="width: 100%;">
-        <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24">
-          <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
-          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
-          <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
-          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
-        </svg>
-        Sign in with Google
-      </button>
+      <!-- Google and Apple Social Icons / Buttons -->
+      <div class="social-auth-grid">
+        <button type="button" id="googleLoginBtn" class="social-auth-btn">
+          <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24">
+            <path fill="#4285F4"
+              d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" />
+            <path fill="#34A853"
+              d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" />
+            <path fill="#FBBC05"
+              d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z" />
+            <path fill="#EA4335"
+              d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" />
+          </svg>
+          <span>Google</span>
+        </button>
+
+        <button type="button" id="appleLoginBtn" class="social-auth-btn">
+          <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.64 1.35-.58.67-1.09 1.74-.95 2.77.99.08 2.05-.52 2.67-1.27z" />
+          </svg>
+          <span>Apple</span>
+        </button>
+      </div>
 
       <div style="text-align: center; margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
         Don't have an account yet? <a href="signup.html" style="color: var(--accent-primary); font-weight: 600;">Sign up</a>
@@ -101,31 +103,16 @@
     </div>
   </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <div>© 2026 NOVA LAPTOPS. All rights reserved. Precision technology discovery.</div>
-        <div class="footer-legal-links">
-          <a href="about.html">Editorial Principles</a>
-          <a href="contact.html">Contact Support</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <!-- Scripts -->
   <script src="assets/js/laptops-data.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/auth.js"></script>
-  <script src="assets/js/bookmarks.js"></script>
-  <script src="assets/js/compare.js"></script>
-  <script src="assets/js/search.js"></script>
-  <script src="assets/js/spec-modal.js"></script>
   <script src="assets/js/main.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) window.lucide.createIcons();
+
       const loginForm = document.getElementById("loginForm");
       if (loginForm) {
         loginForm.addEventListener("submit", (e) => {
@@ -137,7 +124,7 @@
           if (res.success) {
             if (window.showToast) window.showToast(`Welcome back, ${res.user.name}!`, "success");
             setTimeout(() => {
-              window.location.href = "saved.html";
+              window.location.href = "index.html";
             }, 500);
           } else {
             if (window.showToast) window.showToast(res.message, "error");
@@ -151,11 +138,23 @@
           window.novaAuth.signup("Alex Thorne", "alex.thorne@example.com", "password123", "Developer");
           if (window.showToast) window.showToast("Signed in with Google", "success");
           setTimeout(() => {
-            window.location.href = "saved.html";
+            window.location.href = "index.html";
+          }, 500);
+        });
+      }
+
+      const appleBtn = document.getElementById("appleLoginBtn");
+      if (appleBtn) {
+        appleBtn.addEventListener("click", () => {
+          window.novaAuth.signup("Apple User", "apple.user@icloud.com", "password123", "Creator");
+          if (window.showToast) window.showToast("Signed in with Apple ID", "success");
+          setTimeout(() => {
+            window.location.href = "index.html";
           }, 500);
         });
       }
     });
   </script>
 </body>
+
 </html>

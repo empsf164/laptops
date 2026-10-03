@@ -148,7 +148,6 @@
         }
       } else {
         container.innerHTML = `
-          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
           <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
         `;
       }

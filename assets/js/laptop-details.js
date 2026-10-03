@@ -147,7 +147,7 @@
 
         <!-- Tab 1: Overview -->
         <div id="tabOverview" class="tab-content-panel active">
-          <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: start;">
+          <div class="details-overview-grid">
             <div>
               <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Nova Engineering Analysis</h3>
               <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
@@ -210,7 +210,7 @@
         <div id="tabDisplay" class="tab-content-panel">
           <div class="glass-panel" style="padding: 2rem;">
             <h4 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Display Metrology</h4>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+            <div class="details-spec-grid-3">
               <div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Panel Specification</div>
                 <div style="font-weight: 700; margin-top: 0.25rem;">${lap.specs.display}</div>
@@ -235,7 +235,7 @@
         <div id="tabDesign" class="tab-content-panel">
           <div class="glass-panel" style="padding: 2rem;">
             <h4 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Materials & Physical I/O</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="details-spec-grid-2">
               <div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Chassis Materials</div>
                 <div style="font-weight: 700; margin-top: 0.25rem;">${lap.specs.materials}</div>
@@ -258,7 +258,7 @@
         <div id="tabBattery" class="tab-content-panel">
           <div class="glass-panel" style="padding: 2rem;">
             <h4 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Power Delivery & Longevity</h4>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+            <div class="details-spec-grid-3">
               <div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Battery Pack</div>
                 <div style="font-weight: 700; margin-top: 0.25rem;">${lap.specs.battery}</div>

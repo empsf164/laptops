@@ -96,17 +96,21 @@
     let tray = document.getElementById("floatingCompareTray");
     const items = getCompareItems();
 
+    if (items.length === 0) {
+      if (tray) {
+        tray.classList.remove("visible");
+        tray.style.display = "none";
+      }
+      return;
+    }
+
     if (!tray) {
       tray = document.createElement("div");
       tray.id = "floatingCompareTray";
       tray.className = "compare-tray";
       document.body.appendChild(tray);
     }
-
-    if (items.length === 0) {
-      tray.classList.remove("visible");
-      return;
-    }
+    tray.style.display = "flex";
 
     // Lookup laptop data from NOVA_LAPTOPS_DATA
     const laptopList = typeof NOVA_LAPTOPS_DATA !== "undefined" ? NOVA_LAPTOPS_DATA : [];
