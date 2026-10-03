@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Specification Not Found | NOVA LAPTOPS</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==================== STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Nova Laptops Home">
+        <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+        <span>NOVA</span>
+      </a>
+
+      <nav class="main-nav">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="laptops.html" class="nav-link">Laptops</a></div>
+        <div class="nav-item"><a href="compare.html" class="nav-link">Compare</a></div>
+        <div class="nav-item"><a href="laptop-finder.html" class="nav-link">Laptop Finder</a></div>
+        <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <i data-lucide="sun" style="width: 18px; height: 18px;"></i>
+        </button>
+        <a href="laptops.html" class="btn btn-primary btn-sm">Browse Laptops</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="min-height: calc(100vh - var(--header-height) - 160px); display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem;">
+    <div style="text-align: center; max-width: 580px;">
+      <div style="font-family: var(--font-heading); font-size: clamp(5rem, 12vw, 8rem); font-weight: 700; color: var(--accent-primary); line-height: 1; margin-bottom: 1rem;">
+        404
+      </div>
+      <h1 style="font-size: 1.85rem; margin-bottom: 1rem;">Hardware Specification Missing</h1>
+      <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
+        The laptop specification or guide you are looking for has either been relocated, unlisted, or never existed in our silicon database.
+      </p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary">
+          <i data-lucide="home" style="width: 16px; height: 16px;"></i> Return Home
+        </a>
+        <a href="laptops.html" class="btn btn-secondary">
+          <i data-lucide="layout-grid" style="width: 16px; height: 16px;"></i> Explore Catalog
+        </a>
+        <button class="btn btn-outline search-trigger-btn">
+          <i data-lucide="search" style="width: 16px; height: 16px;"></i> Quick Search
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 NOVA LAPTOPS. All rights reserved. Precision technology discovery.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Editorial Principles</a>
+          <a href="contact.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/laptops-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/spec-modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

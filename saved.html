@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Shortlist & Reading List — NOVA LAPTOPS</title>
+  <meta name="description" content="Manage your saved laptop shortlist, bookmarked buying guides, and active side-by-side comparison sets.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==================== STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Nova Laptops Home">
+        <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+        <span>NOVA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item">
+          <a href="laptops.html" class="nav-link">Laptops <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="laptops.html" class="dropdown-item"><i data-lucide="layout-grid"></i> All Laptops</a>
+            <a href="laptops.html?use=Travel" class="dropdown-item"><i data-lucide="feather"></i> Ultrabooks</a>
+            <a href="laptops.html?use=Business" class="dropdown-item"><i data-lucide="briefcase"></i> Business Laptops</a>
+            <a href="laptops.html?use=Gaming" class="dropdown-item"><i data-lucide="gamepad-2"></i> Gaming Laptops</a>
+            <a href="laptops.html?use=Creator" class="dropdown-item"><i data-lucide="palette"></i> Creator Laptops</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="compare.html" class="nav-link">Compare</a></div>
+        <div class="nav-item"><a href="laptop-finder.html" class="nav-link">Laptop Finder</a></div>
+        <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
+        <div class="nav-item"><a href="saved.html" class="nav-link active">Saved</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-trigger-btn" aria-label="Open search">
+          <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+          <span>Search...</span>
+          <kbd class="search-kbd">⌘K</kbd>
+        </button>
+
+        <a href="saved.html" class="nav-badge-link" title="Saved Shortlist">
+          <i data-lucide="bookmark" style="width: 18px; height: 18px;"></i>
+          <span class="counter-badge saved-count-badge">0</span>
+        </a>
+
+        <a href="compare.html" class="nav-badge-link" title="Comparison Tray">
+          <i data-lucide="scale" style="width: 18px; height: 18px;"></i>
+          <span class="counter-badge compare-count-badge">0</span>
+        </a>
+
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <i data-lucide="sun" style="width: 18px; height: 18px;"></i>
+        </button>
+
+        <div class="nav-auth-container">
+          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+        </div>
+
+        <button id="mobileNavToggle" class="mobile-toggle-btn" aria-label="Toggle mobile menu">
+          <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+          <span>NOVA</span>
+        </a>
+        <button id="mobileNavClose" class="btn btn-icon btn-sm" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="laptops.html" class="mobile-nav-link">All Laptops</a>
+        <a href="compare.html" class="mobile-nav-link">Compare Machines</a>
+        <a href="laptop-finder.html" class="mobile-nav-link">Laptop Finder Wizard</a>
+        <a href="guides.html" class="mobile-nav-link">Buying Guides</a>
+        <a href="saved.html" class="mobile-nav-link">Saved Shortlist</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container" id="savedPageContainer">
+      <div style="margin-bottom: 2.5rem;">
+        <div class="section-tag">Personal Workspace</div>
+        <h1 class="section-title">Your Saved Items</h1>
+        <p class="section-subtitle">Curated laptop shortlists, bookmarked buying guides, and configured hardware comparisons.</p>
+      </div>
+
+      <!-- Sync notice banner -->
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div style="width: 36px; height: 36px; border-radius: var(--radius-full); background: var(--accent-subtle); color: var(--accent-primary); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="cloud" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div style="font-size: 0.875rem; color: var(--text-secondary);">
+            Sign in to keep your saved laptops, custom comparisons, and reading bookmarks synchronized across all your devices.
+          </div>
+        </div>
+        <a href="login.html" class="btn btn-primary btn-sm">Sign In / Sync</a>
+      </div>
+
+      <!-- Saved Tabs -->
+      <div class="tabs-nav">
+        <button class="tab-btn saved-tab-btn active" data-saved-tab="savedLaptopsTab">Saved Laptops</button>
+        <button class="tab-btn saved-tab-btn" data-saved-tab="savedGuidesTab">Saved Guides</button>
+        <button class="tab-btn saved-tab-btn" data-saved-tab="savedComparisonsTab">Saved Comparisons</button>
+      </div>
+
+      <!-- Tab Panels -->
+      <div id="savedLaptopsTab" class="tab-content-panel saved-tab-panel active">
+        <div id="savedLaptopsContent">
+          <!-- Dynamically populated by saved-page.js -->
+        </div>
+      </div>
+
+      <div id="savedGuidesTab" class="tab-content-panel saved-tab-panel">
+        <div id="savedGuidesContent">
+          <!-- Dynamically populated by saved-page.js -->
+        </div>
+      </div>
+
+      <div id="savedComparisonsTab" class="tab-content-panel saved-tab-panel">
+        <div id="savedComparisonsContent">
+          <!-- Dynamically populated by saved-page.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 NOVA LAPTOPS. All rights reserved. Precision technology discovery.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Editorial Principles</a>
+          <a href="contact.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/laptops-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/spec-modal.js"></script>
+  <script src="assets/js/saved-page.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

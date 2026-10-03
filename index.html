@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA LAPTOPS — Find the Laptop That Fits Your World</title>
+  <meta name="description" content="Discover, compare, and find high-performance laptops tailored to your workflow. Deep technical specifications, curated buying guides, and precision hardware comparisons.">
+  <meta property="og:title" content="NOVA LAPTOPS — Discover & Compare Laptops">
+  <meta property="og:description" content="Compare laptops by performance, display, battery life, and purpose—without getting lost in technical jargon.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==================== STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Nova Laptops Home">
+        <div class="brand-logo-icon">
+          <i data-lucide="cpu" style="width: 18px; height: 18px;"></i>
+        </div>
+        <span>NOVA</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </div>
+
+        <!-- Laptops Dropdown -->
+        <div class="nav-item">
+          <a href="laptops.html" class="nav-link">
+            Laptops <i data-lucide="chevron-down" class="nav-chevron"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="laptops.html" class="dropdown-item">
+              <i data-lucide="layout-grid"></i> All Laptops
+            </a>
+            <a href="laptops.html?use=Travel" class="dropdown-item">
+              <i data-lucide="feather"></i> Ultrabooks
+            </a>
+            <a href="laptops.html?use=Business" class="dropdown-item">
+              <i data-lucide="briefcase"></i> Business Laptops
+            </a>
+            <a href="laptops.html?use=Gaming" class="dropdown-item">
+              <i data-lucide="gamepad-2"></i> Gaming Laptops
+            </a>
+            <a href="laptops.html?use=Creator" class="dropdown-item">
+              <i data-lucide="palette"></i> Creator Laptops
+            </a>
+            <a href="laptops.html?display=OLED" class="dropdown-item">
+              <i data-lucide="sparkles"></i> 2-in-1 & OLED Laptops
+            </a>
+            <a href="laptops.html?use=Student" class="dropdown-item">
+              <i data-lucide="graduation-cap"></i> Student Laptops
+            </a>
+            <a href="laptops.html?ram=64" class="dropdown-item">
+              <i data-lucide="server"></i> Workstations
+            </a>
+          </div>
+        </div>
+
+        <!-- By Use Dropdown -->
+        <div class="nav-item">
+          <a href="laptops.html" class="nav-link">
+            By Use <i data-lucide="chevron-down" class="nav-chevron"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="laptops.html?use=Student" class="dropdown-item">
+              <i data-lucide="graduation-cap"></i> For Students
+            </a>
+            <a href="laptops.html?use=Work" class="dropdown-item">
+              <i data-lucide="laptop"></i> For Work & Office
+            </a>
+            <a href="laptops.html?use=Developer" class="dropdown-item">
+              <i data-lucide="code-2"></i> For Developers
+            </a>
+            <a href="laptops.html?use=Creator" class="dropdown-item">
+              <i data-lucide="pen-tool"></i> For Designers & UI
+            </a>
+            <a href="laptops.html?use=Creator" class="dropdown-item">
+              <i data-lucide="video"></i> For Video Creators
+            </a>
+            <a href="laptops.html?use=Gaming" class="dropdown-item">
+              <i data-lucide="crosshair"></i> For High-FPS Gaming
+            </a>
+            <a href="laptops.html?use=Business" class="dropdown-item">
+              <i data-lucide="shield-check"></i> For Enterprise & Execs
+            </a>
+            <a href="laptops.html?use=Travel" class="dropdown-item">
+              <i data-lucide="plane"></i> For Travel & Commute
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="compare.html" class="nav-link">Compare</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="laptop-finder.html" class="nav-link">Laptop Finder</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="guides.html" class="nav-link">Guides</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="saved.html" class="nav-link">Saved</a>
+        </div>
+      </nav>
+
+      <!-- Nav Actions (Right) -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <button class="search-trigger-btn" aria-label="Open search">
+          <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+          <span>Search...</span>
+          <kbd class="search-kbd">⌘K</kbd>
+        </button>
+
+        <!-- Saved Counter Link -->
+        <a href="saved.html" class="nav-badge-link" aria-label="Saved items" title="Saved Shortlist">
+          <i data-lucide="bookmark" style="width: 18px; height: 18px;"></i>
+          <span class="counter-badge saved-count-badge">0</span>
+        </a>
+
+        <!-- Compare Counter Link -->
+        <a href="compare.html" class="nav-badge-link" aria-label="Compare list" title="Comparison Tray">
+          <i data-lucide="scale" style="width: 18px; height: 18px;"></i>
+          <span class="counter-badge compare-count-badge">0</span>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i data-lucide="sun" style="width: 18px; height: 18px;"></i>
+        </button>
+
+        <!-- Auth State Container -->
+        <div class="nav-auth-container">
+          <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobileNavToggle" class="mobile-toggle-btn" aria-label="Toggle mobile menu">
+          <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+          <span>NOVA</span>
+        </a>
+        <button id="mobileNavClose" class="btn btn-icon btn-sm" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        
+        <div>
+          <button class="mobile-nav-link mobile-accordion-trigger" style="width: 100%;">
+            <span>Laptops</span>
+            <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="laptops.html" class="mobile-accordion-link">All Laptops</a>
+            <a href="laptops.html?use=Travel" class="mobile-accordion-link">Ultrabooks</a>
+            <a href="laptops.html?use=Business" class="mobile-accordion-link">Business Laptops</a>
+            <a href="laptops.html?use=Gaming" class="mobile-accordion-link">Gaming Laptops</a>
+            <a href="laptops.html?use=Creator" class="mobile-accordion-link">Creator Laptops</a>
+            <a href="laptops.html?display=OLED" class="mobile-accordion-link">2-in-1 & OLED</a>
+            <a href="laptops.html?use=Student" class="mobile-accordion-link">Student Laptops</a>
+            <a href="laptops.html?ram=64" class="mobile-accordion-link">Workstations</a>
+          </div>
+        </div>
+
+        <div>
+          <button class="mobile-nav-link mobile-accordion-trigger" style="width: 100%;">
+            <span>By Use Case</span>
+            <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="laptops.html?use=Student" class="mobile-accordion-link">For Students</a>
+            <a href="laptops.html?use=Work" class="mobile-accordion-link">For Work</a>
+            <a href="laptops.html?use=Developer" class="mobile-accordion-link">For Developers</a>
+            <a href="laptops.html?use=Creator" class="mobile-accordion-link">For Designers</a>
+            <a href="laptops.html?use=Gaming" class="mobile-accordion-link">For Gaming</a>
+            <a href="laptops.html?use=Business" class="mobile-accordion-link">For Business</a>
+          </div>
+        </div>
+
+        <a href="compare.html" class="mobile-nav-link">Compare Machines</a>
+        <a href="laptop-finder.html" class="mobile-nav-link">Laptop Finder Wizard</a>
+        <a href="guides.html" class="mobile-nav-link">Buying Guides</a>
+        <a href="saved.html" class="mobile-nav-link">Saved Shortlist</a>
+        <a href="about.html" class="mobile-nav-link">About Nova</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 0.75rem;">
+        <div class="nav-auth-container" style="display: flex; gap: 0.5rem;">
+          <a href="login.html" class="btn btn-secondary btn-sm" style="flex: 1;">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm" style="flex: 1;">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content-wrapper">
+          <!-- Hero Text -->
+          <div>
+            <div class="section-tag">
+              <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+              Next-Gen Laptop Discovery Platform
+            </div>
+            <h1 class="hero-title">
+              FIND YOUR NEXT <br>
+              <span class="text-gradient">MACHINE.</span>
+            </h1>
+            <p class="hero-desc">
+              Compare laptops by performance, display, battery life, portability, and purpose—without getting lost in confusing technical specifications.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="laptops.html" class="btn btn-primary btn-lg">
+                Explore Laptops <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+              </a>
+              <a href="laptop-finder.html" class="btn btn-secondary btn-lg">
+                Find My Laptop <i data-lucide="compass" style="width: 18px; height: 18px;"></i>
+              </a>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">100%</span>
+                <span class="hero-stat-lbl">Verified Specs</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">4-Way</span>
+                <span class="hero-stat-lbl">Live Compare</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">6-Step</span>
+                <span class="hero-stat-lbl">Finder Wizard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Interactive Spec Visual Display -->
+          <div>
+            <div class="hero-visual-card">
+              <div class="hero-device-wrapper">
+                <img id="heroDeviceImg" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Flagship Laptop Preview" class="hero-device-img">
+                <div class="hero-device-overlay">
+                  <div>
+                    <span class="badge badge-blue">Interactive Hardware Preview</span>
+                    <div style="color: #FFFFFF; font-weight: 700; font-size: 1.125rem; margin-top: 0.25rem;">Explore Architectural Pillars</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pill Controls -->
+              <div class="hero-pill-controls">
+                <button class="hero-pill-btn active" data-hero-target="performance">Performance</button>
+                <button class="hero-pill-btn" data-hero-target="portability">Portability</button>
+                <button class="hero-pill-btn" data-hero-target="battery">Battery</button>
+                <button class="hero-pill-btn" data-hero-target="display">Display</button>
+              </div>
+
+              <!-- Dynamic Specs Grid -->
+              <div id="heroDynamicSpecs" class="hero-spec-dynamic-grid">
+                <div class="hero-spec-metric">
+                  <div class="hero-spec-metric-label">Flagship CPU</div>
+                  <div class="hero-spec-metric-val">Apple M3 Max / Core Ultra 9</div>
+                </div>
+                <div class="hero-spec-metric">
+                  <div class="hero-spec-metric-label">Max Memory</div>
+                  <div class="hero-spec-metric-val">Up to 128GB Unified RAM</div>
+                </div>
+                <div class="hero-spec-metric">
+                  <div class="hero-spec-metric-label">GPU Output</div>
+                  <div class="hero-spec-metric-val">175W High-TGP Graphics</div>
+                </div>
+                <div class="hero-spec-metric">
+                  <div class="hero-spec-metric-label">Throughput</div>
+                  <div class="hero-spec-metric-val">7,500 MB/s NVMe Gen 4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED LAPTOPS ==================== -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <div class="section-tag">Hand-Curated Selection</div>
+            <h2 class="section-title">Featured Laptops</h2>
+            <p class="section-subtitle">Flagship notebooks setting new standards in computing, ergonomics, and efficiency.</p>
+          </div>
+          <a href="laptops.html" class="btn btn-outline">
+            View All Laptops <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Featured Laptop 1: MacBook Pro 16 M3 -->
+          <div class="laptop-card">
+            <div class="laptop-card-media">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Apple MacBook Pro 16" class="laptop-card-img" loading="lazy">
+              <div class="laptop-card-badges">
+                <span class="badge badge-cyan">Creator Pick</span>
+              </div>
+              <div class="laptop-card-quick-actions">
+                <button class="card-icon-action-btn" data-save-laptop-btn="macbook-pro-16-m3" title="Save to shortlist">
+                  <i data-lucide="bookmark" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="laptop-card-body">
+              <div class="laptop-card-brand-row">
+                <span class="laptop-card-brand">Apple</span>
+                <span class="laptop-card-price">$2,499</span>
+              </div>
+              <h3 class="laptop-card-title"><a href="laptop-details.html?id=macbook-pro-16-m3">MacBook Pro 16" (M3 Max)</a></h3>
+              <div class="card-specs-matrix">
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Processor</span>
+                  <span class="spec-chip-value">Apple M3 Max 16-Core</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">RAM / SSD</span>
+                  <span class="spec-chip-value">36GB • 1TB NVMe</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Display</span>
+                  <span class="spec-chip-value">16.2" Mini-LED 120Hz</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Weight</span>
+                  <span class="spec-chip-value">2.14 kg</span>
+                </div>
+              </div>
+              <div class="laptop-card-footer">
+                <button class="btn btn-secondary btn-card-compare" data-compare-btn="macbook-pro-16-m3">
+                  <i data-lucide="scale" style="width: 14px; height: 14px;"></i> Compare
+                </button>
+                <a href="laptop-details.html?id=macbook-pro-16-m3" class="btn btn-outline btn-sm">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Laptop 2: Dell XPS 14 -->
+          <div class="laptop-card">
+            <div class="laptop-card-media">
+              <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80" alt="Dell XPS 14" class="laptop-card-img" loading="lazy">
+              <div class="laptop-card-badges">
+                <span class="badge badge-blue">New Architecture</span>
+              </div>
+              <div class="laptop-card-quick-actions">
+                <button class="card-icon-action-btn" data-save-laptop-btn="dell-xps-14-2024" title="Save to shortlist">
+                  <i data-lucide="bookmark" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="laptop-card-body">
+              <div class="laptop-card-brand-row">
+                <span class="laptop-card-brand">Dell</span>
+                <span class="laptop-card-price">$1,899</span>
+              </div>
+              <h3 class="laptop-card-title"><a href="laptop-details.html?id=dell-xps-14-2024">XPS 14 (9440) OLED</a></h3>
+              <div class="card-specs-matrix">
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Processor</span>
+                  <span class="spec-chip-value">Core Ultra 7 155H</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">RAM / SSD</span>
+                  <span class="spec-chip-value">32GB • 1TB NVMe</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Display</span>
+                  <span class="spec-chip-value">14.5" 3.2K OLED 120Hz</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Weight</span>
+                  <span class="spec-chip-value">1.68 kg</span>
+                </div>
+              </div>
+              <div class="laptop-card-footer">
+                <button class="btn btn-secondary btn-card-compare" data-compare-btn="dell-xps-14-2024">
+                  <i data-lucide="scale" style="width: 14px; height: 14px;"></i> Compare
+                </button>
+                <a href="laptop-details.html?id=dell-xps-14-2024" class="btn btn-outline btn-sm">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Laptop 3: Lenovo ThinkPad X1 Carbon Gen 12 -->
+          <div class="laptop-card">
+            <div class="laptop-card-media">
+              <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80" alt="Lenovo ThinkPad X1 Carbon" class="laptop-card-img" loading="lazy">
+              <div class="laptop-card-badges">
+                <span class="badge badge-emerald">Lightweight (1.09kg)</span>
+              </div>
+              <div class="laptop-card-quick-actions">
+                <button class="card-icon-action-btn" data-save-laptop-btn="lenovo-thinkpad-x1-carbon-gen12" title="Save to shortlist">
+                  <i data-lucide="bookmark" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+            </div>
+            <div class="laptop-card-body">
+              <div class="laptop-card-brand-row">
+                <span class="laptop-card-brand">Lenovo</span>
+                <span class="laptop-card-price">$1,749</span>
+              </div>
+              <h3 class="laptop-card-title"><a href="laptop-details.html?id=lenovo-thinkpad-x1-carbon-gen12">ThinkPad X1 Carbon Gen 12</a></h3>
+              <div class="card-specs-matrix">
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Processor</span>
+                  <span class="spec-chip-value">Core Ultra 7 165U</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">RAM / SSD</span>
+                  <span class="spec-chip-value">32GB • 1TB NVMe</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Display</span>
+                  <span class="spec-chip-value">14.0" 2.8K OLED 120Hz</span>
+                </div>
+                <div class="spec-chip-item">
+                  <span class="spec-chip-label">Weight</span>
+                  <span class="spec-chip-value">1.09 kg</span>
+                </div>
+              </div>
+              <div class="laptop-card-footer">
+                <button class="btn btn-secondary btn-card-compare" data-compare-btn="lenovo-thinkpad-x1-carbon-gen12">
+                  <i data-lucide="scale" style="width: 14px; height: 14px;"></i> Compare
+                </button>
+                <a href="laptop-details.html?id=lenovo-thinkpad-x1-carbon-gen12" class="btn btn-outline btn-sm">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPLORE BY USE CASE ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Purpose-Built Systems</div>
+          <h2 class="section-title">Explore by Primary Use Case</h2>
+          <p class="section-subtitle">Targeted hardware configurations matched to specific daily workflows and software demands.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Card: Developers -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--accent-subtle); color: var(--accent-primary); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+              <i data-lucide="code-2" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Development</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+              Heavy IDEs, multi-container Docker workflows, local LLM testing, and rapid code compilation.
+            </p>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <strong style="color: var(--text-primary);">Recommended:</strong> 32GB+ RAM, High Multicore CPU, NVMe Gen 4
+            </div>
+            <a href="laptops.html?use=Developer" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              Explore Developer Laptops <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card: Creators -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--cyan-subtle); color: var(--cyan-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+              <i data-lucide="palette" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Creation & Design</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+              4K/8K timeline rendering, color grading, 3D modeling in Blender, and high-fidelity graphic design.
+            </p>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <strong style="color: var(--text-primary);">Recommended:</strong> OLED / Mini-LED, 100% DCI-P3, Dedicated GPU
+            </div>
+            <a href="laptops.html?use=Creator" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              Explore Creator Laptops <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card: Gaming -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--amber-subtle); color: var(--amber-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+              <i data-lucide="gamepad-2" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Gaming & High-FPS</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+              Esports competition, ray-traced AAA titles, unthrottled TGP graphics, and 240Hz fast displays.
+            </p>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <strong style="color: var(--text-primary);">Recommended:</strong> NVIDIA RTX 40-Series (115W+ TGP), 165Hz+ Screen
+            </div>
+            <a href="laptops.html?use=Gaming" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              Explore Gaming Laptops <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card: Students -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--emerald-subtle); color: var(--emerald-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+              <i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Study & Academics</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+              Lecture note-taking, browser research, campus mobility, and 15+ hour battery longevity.
+            </p>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <strong style="color: var(--text-primary);">Recommended:</strong> 16GB RAM, Lightweight chassis (<1.4kg), Long Battery
+            </div>
+            <a href="laptops.html?use=Student" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              Explore Student Laptops <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card: Business & Execs -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--accent-subtle); color: var(--accent-primary); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+              <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Business & Enterprise</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+              Corporate security (vPro, TPM), MIL-STD durability, conference webcams, and executive aesthetics.
+            </p>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <strong style="color: var(--text-primary);">Recommended:</strong> Intel vPro / ThinkPad chassis, Privacy shutters
+            </div>
+            <a href="laptops.html?use=Business" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              Explore Business Laptops <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Card: Travel & Remote -->
+          <div class="glass-panel" style="padding: 2rem; display: flex; flex-direction: column;">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--cyan-subtle); color: var(--cyan-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+              <i data-lucide="plane" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Travel & Commuting</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;">
+              Compact 13-14" footprints, USB-C Power Delivery charging, featherweight chassis, and 5G option.
+            </p>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+              <strong style="color: var(--text-primary);">Recommended:</strong> Snapdragon X / M3, Under 1.3kg, GaN charger
+            </div>
+            <a href="laptops.html?use=Travel" class="btn btn-outline btn-sm" style="margin-top: auto;">
+              Explore Travel Laptops <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LAPTOP FINDER PROMO ==================== -->
+    <section class="section" style="background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);">
+      <div class="container">
+        <div style="background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.18), transparent 60%), var(--bg-elevated); border: 1px solid var(--border-strong); border-radius: var(--radius-xl); padding: clamp(2rem, 5vw, 4rem); display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+          <div>
+            <div class="section-tag" style="background: var(--bg-primary);">Interactive Recommendation Engine</div>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1rem;">NOT SURE WHAT YOU NEED?</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
+              Answer 6 quick questions regarding your daily workflow, portability priorities, display preferences, and budget ceiling. Our algorithm will match you with the exact right laptop configurations.
+            </p>
+            <a href="laptop-finder.html" class="btn btn-primary btn-lg">
+              Start Laptop Finder <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+            </a>
+          </div>
+
+          <div style="background: var(--bg-primary); border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: 1.75rem;">
+            <div style="font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem; color: var(--accent-primary);">
+              Finder Criteria Covered:
+            </div>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check" style="color: var(--emerald-accent); width: 16px; height: 16px;"></i> Primary software workloads & tasks</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check" style="color: var(--emerald-accent); width: 16px; height: 16px;"></i> CPU & GPU performance demand</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check" style="color: var(--emerald-accent); width: 16px; height: 16px;"></i> Weight & unplugged battery requirements</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check" style="color: var(--emerald-accent); width: 16px; height: 16px;"></i> Display panel tech (OLED, IPS, Mini-LED)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check" style="color: var(--emerald-accent); width: 16px; height: 16px;"></i> Screen size & budget range slider</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== QUICK SPEC EXPLORER ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Specification Education</div>
+          <h2 class="section-title">Quick Spec Explorer</h2>
+          <p class="section-subtitle">Click any hardware component to understand what it means and how it impacts your daily experience.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          <!-- Spec Explorer Pill Tabs -->
+          <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <button class="btn btn-secondary btn-sm spec-tab-btn active" data-spec-tab="cpu">CPU (Processor)</button>
+            <button class="btn btn-secondary btn-sm spec-tab-btn" data-spec-tab="gpu">GPU (Graphics)</button>
+            <button class="btn btn-secondary btn-sm spec-tab-btn" data-spec-tab="ram">RAM (Memory)</button>
+            <button class="btn btn-secondary btn-sm spec-tab-btn" data-spec-tab="storage">SSD Storage</button>
+            <button class="btn btn-secondary btn-sm spec-tab-btn" data-spec-tab="display">Display & Panel</button>
+            <button class="btn btn-secondary btn-sm spec-tab-btn" data-spec-tab="battery">Battery & Wh</button>
+          </div>
+
+          <!-- Spec Explorer Live Content Box -->
+          <div id="specExplorerContent">
+            <div style="background: var(--bg-secondary); border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: 1.75rem;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <h3 style="font-size: 1.25rem; color: var(--text-primary);">Processor (CPU)</h3>
+                <button class="spec-help-trigger" data-spec-explainer="cpu">
+                  <span>Deep dive</span> <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+                </button>
+              </div>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;">
+                The brain of your machine. Higher core counts and modern architecture (Intel Core Ultra, AMD Ryzen 8000, Apple M3, Qualcomm Snapdragon X) enable instant app launching, smooth multitasking, and lightning-fast code compiling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDITORIAL BUYING GUIDES ==================== -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <div class="section-tag">Editorial Insights</div>
+            <h2 class="section-title">Hardware Buying Guides</h2>
+            <p class="section-subtitle">Deep engineering breakdowns to help you make informed hardware purchasing decisions.</p>
+          </div>
+          <a href="guides.html" class="btn btn-outline">
+            Browse All Guides <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Guide 1 -->
+          <div class="guide-card">
+            <div class="guide-card-media">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="RAM Buying Guide" class="guide-card-img" loading="lazy">
+            </div>
+            <div class="guide-card-body">
+              <div class="guide-meta-row">
+                <span class="badge badge-blue">Performance</span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="guide-card-title"><a href="guide-details.html?id=ram-guide-2024">How Much RAM Do You Really Need in 2024–2025?</a></h3>
+              <p class="guide-card-excerpt">From 8GB base configs to 64GB workstation powerhouses, discover the exact memory capacity required for your software stack.</p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                <a href="guide-details.html?id=ram-guide-2024" class="btn btn-outline btn-sm">Read Guide</a>
+                <button class="card-icon-action-btn" data-save-guide-btn="ram-guide-2024" title="Save Guide">
+                  <i data-lucide="bookmark" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="guide-card">
+            <div class="guide-card-media">
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="OLED vs IPS Guide" class="guide-card-img" loading="lazy">
+            </div>
+            <div class="guide-card-body">
+              <div class="guide-meta-row">
+                <span class="badge badge-cyan">Displays</span>
+                <span>8 min read</span>
+              </div>
+              <h3 class="guide-card-title"><a href="guide-details.html?id=oled-vs-ips-displays">OLED vs IPS vs Mini-LED: Complete Laptop Display Guide</a></h3>
+              <p class="guide-card-excerpt">Infinite contrast, blinding HDR brightness, or battery-sipping matte panels? We break down the real trade-offs.</p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                <a href="guide-details.html?id=oled-vs-ips-displays" class="btn btn-outline btn-sm">Read Guide</a>
+                <button class="card-icon-action-btn" data-save-guide-btn="oled-vs-ips-displays" title="Save Guide">
+                  <i data-lucide="bookmark" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="guide-card">
+            <div class="guide-card-media">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="CPU Architectures Guide" class="guide-card-img" loading="lazy">
+            </div>
+            <div class="guide-card-body">
+              <div class="guide-meta-row">
+                <span class="badge badge-amber">Silicon Architecture</span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="guide-card-title"><a href="guide-details.html?id=laptop-cpu-architectures-explained">Laptop CPUs Explained: Intel vs AMD vs Apple vs Snapdragon</a></h3>
+              <p class="guide-card-excerpt">A deep architectural analysis of the four computing architectures defining personal computing today.</p>
+              <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                <a href="guide-details.html?id=laptop-cpu-architectures-explained" class="btn btn-outline btn-sm">Read Guide</a>
+                <button class="card-icon-action-btn" data-save-guide-btn="laptop-cpu-architectures-explained" title="Save Guide">
+                  <i data-lucide="bookmark" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section class="section" style="text-align: center;">
+      <div class="container">
+        <div style="max-width: 680px; margin: 0 auto;">
+          <div class="section-tag">Take the Guesswork Out of Hardware</div>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1rem;">YOUR NEXT LAPTOP STARTS WITH THE RIGHT QUESTIONS.</h2>
+          <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
+            Whether you are compiling code, rendering 4K video, or taking lecture notes across campus, find the exact laptop configured for your ambitions.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="laptop-finder.html" class="btn btn-primary btn-lg">
+              Find Your Laptop <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+            </a>
+            <a href="compare.html" class="btn btn-secondary btn-lg">
+              Open Comparison Table <i data-lucide="scale" style="width: 18px; height: 18px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+            <span>NOVA</span>
+          </a>
+          <p>
+            Find the Laptop That Fits Your World. Objective hardware discovery, deep technical comparisons, and unbiased buying intelligence.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="laptops.html">All Laptops</a>
+            <a href="laptops.html?use=Developer">For Developers</a>
+            <a href="laptops.html?use=Creator">For Creators</a>
+            <a href="laptops.html?use=Gaming">For Gaming</a>
+            <a href="laptops.html?use=Student">For Students</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hardware Tools</h4>
+          <div class="footer-links">
+            <a href="laptop-finder.html">Laptop Finder Wizard</a>
+            <a href="compare.html">Side-by-Side Compare</a>
+            <a href="saved.html">Saved Shortlist</a>
+            <a href="guides.html">Buying Guides</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <div class="footer-links">
+            <a href="about.html">About Nova</a>
+            <a href="contact.html">Editorial Team</a>
+            <a href="login.html">Member Login</a>
+            <a href="signup.html">Create Account</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Brands</h4>
+          <div class="footer-links">
+            <a href="laptops.html?brand=Apple">Apple MacBooks</a>
+            <a href="laptops.html?brand=Dell">Dell XPS & Precision</a>
+            <a href="laptops.html?brand=Lenovo">Lenovo ThinkPad & Legion</a>
+            <a href="laptops.html?brand=ASUS">ASUS ROG & Zenbook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 NOVA LAPTOPS. All rights reserved. Precision technology discovery.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Editorial Principles</a>
+          <a href="contact.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/laptops-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/spec-modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

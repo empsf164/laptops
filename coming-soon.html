@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Labs — Upcoming Technology Roadmaps | NOVA LAPTOPS</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==================== STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Nova Laptops Home">
+        <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+        <span>NOVA</span>
+      </a>
+
+      <nav class="main-nav">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="laptops.html" class="nav-link">Laptops</a></div>
+        <div class="nav-item"><a href="compare.html" class="nav-link">Compare</a></div>
+        <div class="nav-item"><a href="laptop-finder.html" class="nav-link">Laptop Finder</a></div>
+        <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <i data-lucide="sun" style="width: 18px; height: 18px;"></i>
+        </button>
+        <a href="laptops.html" class="btn btn-primary btn-sm">Explore Laptops</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section" style="min-height: calc(100vh - var(--header-height) - 160px); display: flex; align-items: center; justify-content: center;">
+    <div class="container" style="max-width: 720px; text-align: center;">
+      <div class="section-tag" style="margin-bottom: 1.5rem;">Nova Hardware Labs</div>
+      <h1 class="section-title" style="font-size: clamp(2.25rem, 4.5vw, 3.5rem);">Interactive 3D Hardware Explorer Coming Soon</h1>
+      <p class="section-subtitle" style="margin-bottom: 2.5rem;">
+        We are building a real-time 3D chassis tear-down viewer and an on-device local AI benchmark estimator for modern Snapdragon X, M-Series, and Intel Core Ultra laptops.
+      </p>
+
+      <div class="glass-panel" style="padding: 2.5rem; max-width: 540px; margin: 0 auto 2.5rem;">
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.75rem;">Get Notified on Release</h3>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Join our early hardware testing group to receive invite-only access to interactive 3D laptop models.
+        </p>
+        <form id="notifyForm" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <input type="email" id="notifyEmail" class="form-input" placeholder="you@company.com" style="flex: 1; min-width: 220px;" required>
+          <button type="submit" class="btn btn-primary">
+            Notify Me <i data-lucide="bell" style="width: 16px; height: 16px;"></i>
+          </button>
+        </form>
+      </div>
+
+      <a href="laptops.html" class="btn btn-outline btn-sm">
+        <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> Return to Laptop Catalog
+      </a>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 NOVA LAPTOPS. All rights reserved. Precision technology discovery.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Editorial Principles</a>
+          <a href="contact.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/laptops-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/spec-modal.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("notifyForm");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (window.showToast) {
+            window.showToast("Thank you! You've been added to the Nova Labs early preview.", "success");
+          }
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

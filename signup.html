@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Nova Account — NOVA LAPTOPS</title>
+  <meta name="description" content="Create a free Nova account to build buying shortlists, save custom comparisons, and track laptop specifications.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==================== STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Nova Laptops Home">
+        <div class="brand-logo-icon"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i></div>
+        <span>NOVA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="laptops.html" class="nav-link">Laptops</a></div>
+        <div class="nav-item"><a href="compare.html" class="nav-link">Compare</a></div>
+        <div class="nav-item"><a href="laptop-finder.html" class="nav-link">Laptop Finder</a></div>
+        <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
+        <div class="nav-item"><a href="saved.html" class="nav-link">Saved</a></div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <i data-lucide="sun" style="width: 18px; height: 18px;"></i>
+        </button>
+        <a href="login.html" class="btn btn-secondary btn-sm">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page-container">
+    <div class="auth-card" style="max-width: 520px;">
+      <div class="auth-header">
+        <div class="brand-logo-icon" style="margin: 0 auto 1rem; width: 36px; height: 36px;">
+          <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
+        </div>
+        <h1 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Create Your Account</h1>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);">Unlock persistent hardware shortlists and personalized matching criteria.</p>
+      </div>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label class="form-label" for="signupName">Full Name</label>
+          <input type="text" id="signupName" class="form-input" placeholder="e.g. Jordan Miller" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" class="form-input" placeholder="jordan@company.com" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" class="form-input" placeholder="Min. 8 characters" minlength="6" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupConfirmPassword">Confirm Password</label>
+            <input type="password" id="signupConfirmPassword" class="form-input" placeholder="Repeat password" minlength="6" required>
+          </div>
+        </div>
+
+        <!-- Onboarding Workflow Preference -->
+        <div class="form-group" style="margin-top: 1rem;">
+          <label class="form-label">What are you primarily looking for?</label>
+          <div id="prefPillsContainer" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button type="button" class="filter-chip" data-pref-val="Study">Study</button>
+            <button type="button" class="filter-chip" data-pref-val="Work">Work</button>
+            <button type="button" class="filter-chip" data-pref-val="Gaming">Gaming</button>
+            <button type="button" class="filter-chip" data-pref-val="Creative">Creative</button>
+            <button type="button" class="filter-chip" data-pref-val="Developer" style="background: var(--accent-primary); color: #FFFFFF;">Developer</button>
+            <button type="button" class="filter-chip" data-pref-val="Business">Business</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Create Account <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+        Already have an account? <a href="login.html" style="color: var(--accent-primary); font-weight: 600;">Sign in</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 NOVA LAPTOPS. All rights reserved. Precision technology discovery.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Editorial Principles</a>
+          <a href="contact.html">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/laptops-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/spec-modal.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let selectedPref = "Developer";
+
+      const prefChips = document.querySelectorAll("#prefPillsContainer button");
+      prefChips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          prefChips.forEach(c => {
+            c.style.background = "var(--accent-subtle)";
+            c.style.color = "var(--accent-primary)";
+          });
+          chip.style.background = "var(--accent-primary)";
+          chip.style.color = "#FFFFFF";
+          selectedPref = chip.getAttribute("data-pref-val");
+        });
+      });
+
+      const form = document.getElementById("signupForm");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("signupName").value.trim();
+          const email = document.getElementById("signupEmail").value.trim();
+          const pass = document.getElementById("signupPassword").value;
+          const confirmPass = document.getElementById("signupConfirmPassword").value;
+
+          if (pass !== confirmPass) {
+            if (window.showToast) window.showToast("Passwords do not match", "error");
+            return;
+          }
+
+          const res = window.novaAuth.signup(name, email, pass, selectedPref);
+          if (res.success) {
+            if (window.showToast) window.showToast(`Account created! Welcome to Nova, ${name}.`, "success");
+            setTimeout(() => {
+              window.location.href = "saved.html";
+            }, 600);
+          } else {
+            if (window.showToast) window.showToast(res.message, "error");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
