@@ -315,9 +315,6 @@
               <div class="laptop-card">
                 <div class="laptop-card-media">
                   <img src="${rel.image}" alt="${rel.model}" class="laptop-card-img" loading="lazy">
-                  <div class="laptop-card-badges">
-                    <span class="badge badge-blue">${rel.badge}</span>
-                  </div>
                 </div>
                 <div class="laptop-card-body">
                   <div class="laptop-card-brand-row">

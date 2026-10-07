@@ -61,9 +61,6 @@
                 <div class="laptop-card">
                   <div class="laptop-card-media">
                     <img src="${lap.image}" alt="${lap.model}" class="laptop-card-img" loading="lazy">
-                    <div class="laptop-card-badges">
-                      <span class="badge badge-blue">${lap.badge}</span>
-                    </div>
                     <div class="laptop-card-quick-actions">
                       <button class="card-icon-action-btn active" data-save-laptop-btn="${lap.id}" title="Remove from shortlist">
                         <i data-lucide="bookmark-check" style="width: 16px; height: 16px;"></i>

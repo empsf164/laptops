@@ -322,18 +322,10 @@
       const isSaved = window.novaBookmarks ? window.novaBookmarks.isLaptopSaved(lap.id) : false;
       const inCompare = window.novaCompare ? window.novaCompare.isLaptopInCompare(lap.id) : false;
 
-      let badgeClass = "badge-blue";
-      if (lap.badge === "Creator Pick") badgeClass = "badge-cyan";
-      if (lap.badge === "Lightweight") badgeClass = "badge-emerald";
-      if (lap.badge === "Performance") badgeClass = "badge-amber";
-
       html += `
         <div class="laptop-card" data-laptop-id="${lap.id}">
           <div class="laptop-card-media">
             <img src="${lap.image}" alt="${lap.brand} ${lap.model}" class="laptop-card-img" loading="lazy">
-            <div class="laptop-card-badges">
-              <span class="badge ${badgeClass}">${lap.badge}</span>
-            </div>
             <div class="laptop-card-quick-actions">
               <button class="card-icon-action-btn ${isSaved ? "active" : ""}" data-save-laptop-btn="${lap.id}" title="Save to shortlist">
                 <i data-lucide="${isSaved ? "bookmark-check" : "bookmark"}" style="width: 16px; height: 16px;"></i>
@@ -489,7 +481,7 @@
 
     // Checkbox changes (delegated)
     document.body.addEventListener("change", (e) => {
-      if (e.target.classList.contains("filter-checkbox")) {
+      if (e.target.classList.contains("filter-checkbox") && e.target.getAttribute("data-filter-type")) {
         const type = e.target.getAttribute("data-filter-type");
         const val = e.target.value;
         if (e.target.checked) {
@@ -497,37 +489,54 @@
         } else {
           activeFilters[type] = activeFilters[type].filter((item) => item !== val);
         }
+        
+        // Synchronize all instances of this checkbox (desktop & mobile)
+        document.querySelectorAll(`.filter-checkbox[data-filter-type="${type}"][value="${CSS.escape(val)}"]`).forEach(cb => {
+          cb.checked = e.target.checked;
+        });
+
         applyFilters();
       }
     });
 
-    // Reset buttons
+    // Reset buttons (delegated)
     document.body.addEventListener("click", (e) => {
-      if (e.target.id === "clearAllFiltersBtn") {
+      if (e.target.id === "clearAllFiltersBtn" || e.target.closest("#clearAllFiltersBtn")) {
         resetAllFilters();
       }
     });
 
-    // Mobile filter drawer trigger
+    // Mobile filter drawer trigger & actions
     const mobileFilterOpenBtn = document.getElementById("openMobileFiltersBtn");
     const mobileFilterDrawer = document.getElementById("mobileFilterDrawer");
     const mobileFilterCloseBtn = document.getElementById("closeMobileFiltersBtn");
     const mobileFilterApplyBtn = document.getElementById("applyMobileFiltersBtn");
 
     if (mobileFilterOpenBtn && mobileFilterDrawer) {
-      mobileFilterOpenBtn.addEventListener("click", () => {
+      mobileFilterOpenBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         mobileFilterDrawer.classList.add("open");
       });
     }
 
     if (mobileFilterCloseBtn && mobileFilterDrawer) {
-      mobileFilterCloseBtn.addEventListener("click", () => {
+      mobileFilterCloseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         mobileFilterDrawer.classList.remove("open");
       });
     }
 
+    if (mobileFilterDrawer) {
+      mobileFilterDrawer.addEventListener("click", (e) => {
+        if (e.target === mobileFilterDrawer) {
+          mobileFilterDrawer.classList.remove("open");
+        }
+      });
+    }
+
     if (mobileFilterApplyBtn && mobileFilterDrawer) {
-      mobileFilterApplyBtn.addEventListener("click", () => {
+      mobileFilterApplyBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         mobileFilterDrawer.classList.remove("open");
         applyFilters();
       });

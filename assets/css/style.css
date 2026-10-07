@@ -116,7 +116,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   width: 100%;
 }
@@ -129,7 +129,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   width: 100%;
   position: relative;
@@ -241,19 +241,27 @@ p, span, div, a {
   gap: 0.4rem;
   font-family: var(--font-mono);
   font-size: clamp(0.6875rem, 2.5vw, 0.75rem);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent-primary);
-  background: var(--accent-subtle);
-  padding: 0.35rem 0.85rem;
+  letter-spacing: 0.06em;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  padding: 0.4rem 0.95rem;
   border-radius: var(--radius-full);
   margin-bottom: 1rem;
-  border: 1px solid var(--border-glow);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.15);
   max-width: 100%;
   white-space: normal;
   text-align: center;
   box-sizing: border-box;
+}
+
+[data-theme="light"] .section-tag {
+  color: #0284C7;
+  background: rgba(2, 132, 199, 0.12);
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.1);
 }
 
 .section-title {
@@ -667,11 +675,14 @@ p, span, div, a {
 .footer-links a {
   color: var(--text-secondary);
   font-size: 0.9375rem;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer-links a:hover {
-  color: var(--accent-primary);
+  color: var(--accent-hover);
+  transform: translateX(4px);
 }
 
 .footer-bottom {
@@ -687,6 +698,16 @@ p, span, div, a {
 .footer-legal-links {
   display: flex;
   gap: 1.5rem;
+}
+
+.footer-legal-links a {
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.footer-legal-links a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
 }
 
 /* Custom Scrollbars */

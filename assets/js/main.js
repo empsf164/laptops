@@ -56,15 +56,90 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Sticky Navbar Scroll Effect
   const header = document.querySelector(".site-header");
-  if (header) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 20) {
+  const handleHeaderScroll = () => {
+    if (header) {
+      if (window.scrollY > 10) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
-    });
+    }
+  };
+  window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
+
+  // Back to Top Button System
+  let backToTopBtn = document.getElementById("backToTopBtn");
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement("button");
+    backToTopBtn.id = "backToTopBtn";
+    backToTopBtn.className = "back-to-top-btn";
+    backToTopBtn.setAttribute("aria-label", "Back to top");
+    backToTopBtn.setAttribute("title", "Back to top");
+    backToTopBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>`;
+    document.body.appendChild(backToTopBtn);
   }
+
+  const handleBackToTopVisibility = () => {
+    if (backToTopBtn) {
+      if (window.scrollY > 250) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
+      }
+    }
+  };
+  window.addEventListener("scroll", handleBackToTopVisibility, { passive: true });
+  handleBackToTopVisibility();
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Active Menu Highlighting Sync (Desktop & Mobile Nav)
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const normalizePageName = (path) => {
+    if (!path || path === "/" || path === "index.html") return "index.html";
+    return path.split("?")[0].split("#")[0];
+  };
+
+  const activePage = normalizePageName(currentPath);
+
+  // Sync desktop nav links
+  document.querySelectorAll(".main-nav .nav-link").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && normalizePageName(href) === activePage) {
+      link.classList.add("active");
+    } else if (href && !link.closest(".dropdown-menu")) {
+      link.classList.remove("active");
+    }
+  });
+
+  // Sync mobile drawer nav links
+  document.querySelectorAll(".mobile-nav-links .mobile-nav-link").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && normalizePageName(href) === activePage) {
+      link.classList.add("active");
+    } else if (href) {
+      link.classList.remove("active");
+    }
+  });
+
+  // Global Password Show/Hide Toggle Handler
+  document.addEventListener("click", (e) => {
+    const toggleBtn = e.target.closest(".password-toggle-btn");
+    if (toggleBtn) {
+      e.preventDefault();
+      const wrapper = toggleBtn.closest(".password-input-wrapper") || toggleBtn.parentElement;
+      const input = wrapper ? wrapper.querySelector("input") : null;
+      if (input) {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        toggleBtn.innerHTML = `<i data-lucide="${isPassword ? "eye-off" : "eye"}" style="width: 18px; height: 18px;"></i>`;
+        if (window.lucide) window.lucide.createIcons();
+      }
+    }
+  });
 
   // Mobile Navigation Drawer
   const mobileToggleBtn = document.getElementById("mobileNavToggle");
