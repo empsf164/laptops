@@ -100,7 +100,7 @@
       if (isSaved) {
         btn.classList.add("active");
         btn.setAttribute("title", "Saved to shortlist");
-        btn.innerHTML = '<i data-lucide="bookmark-check" style="width: 18px; height: 18px; color: var(--accent-primary);"></i>';
+        btn.innerHTML = '<i data-lucide="bookmark-check" style="width: 18px; height: 18px;"></i>';
       } else {
         btn.classList.remove("active");
         btn.setAttribute("title", "Save to shortlist");
@@ -112,13 +112,28 @@
     document.querySelectorAll("[data-save-guide-btn]").forEach((btn) => {
       const guideId = btn.getAttribute("data-save-guide-btn");
       const isSaved = savedGuides.includes(guideId);
+      const isIconOnly = btn.classList.contains("card-icon-action-btn");
 
-      if (isSaved) {
-        btn.classList.add("active");
-        btn.innerHTML = '<i data-lucide="bookmark-check" style="width: 18px; height: 18px; color: var(--accent-primary);"></i> Saved';
+      if (isIconOnly) {
+        if (isSaved) {
+          btn.classList.add("active");
+          btn.setAttribute("title", "Saved to reading list");
+          btn.innerHTML = '<i data-lucide="bookmark-check" style="width: 18px; height: 18px;"></i>';
+        } else {
+          btn.classList.remove("active");
+          btn.setAttribute("title", "Save Guide");
+          btn.innerHTML = '<i data-lucide="bookmark" style="width: 18px; height: 18px;"></i>';
+        }
       } else {
-        btn.classList.remove("active");
-        btn.innerHTML = '<i data-lucide="bookmark" style="width: 18px; height: 18px;"></i> Save Guide';
+        if (isSaved) {
+          btn.classList.add("active");
+          btn.setAttribute("title", "Saved to reading list");
+          btn.innerHTML = '<i data-lucide="bookmark-check" style="width: 18px; height: 18px;"></i> <span>Saved</span>';
+        } else {
+          btn.classList.remove("active");
+          btn.setAttribute("title", "Save Guide");
+          btn.innerHTML = '<i data-lucide="bookmark" style="width: 18px; height: 18px;"></i> <span>Save Guide</span>';
+        }
       }
     });
 

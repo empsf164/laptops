@@ -130,7 +130,7 @@
                     </div>
                     <h3 class="guide-card-title"><a href="guide-details.html?id=${g.id}">${g.title}</a></h3>
                     <p class="guide-card-excerpt">${g.excerpt}</p>
-                    <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                    <div class="guide-card-footer">
                       <a href="guide-details.html?id=${g.id}" class="btn btn-outline btn-sm">Read Article</a>
                       <button class="card-icon-action-btn active" data-save-guide-btn="${g.id}" title="Remove">
                         <i data-lucide="bookmark-check" style="width: 16px; height: 16px;"></i>
